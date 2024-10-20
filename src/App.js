@@ -2,9 +2,12 @@
 // import Main from './components/Main';
 // import Header from './components/Header';
 import './App.css';
-import MealList from './components/MealsList';
-import Counter from './components/Counter';
-import MealsProvider from './providers/MealsProvider';
+import Homepg from './Homepg';
+import About from './About';
+import { Routes, Route, Link } from 'react-router-dom';
+// import MealList from './components/MealsList';
+// import Counter from './components/Counter';
+// import MealsProvider from './providers/MealsProvider';
 // import Btn from './components/Btn';
 // import Heading from './Heading';
 // import React, {useState} from 'react';
@@ -28,11 +31,19 @@ function App() {
       <Main />
       <Sidebar /> */}
 
-      <MealsProvider>
+      {/* <MealsProvider>
         <MealList/>
         <Counter/>
-      </MealsProvider>
+      </MealsProvider> */}
 
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
+      <Routes>
+        <Route path='/' errorElement={<Homepg />} />
+        <Route path='/about' errorElement={<About />} />
+      </Routes>
     </div>
   );
 }
