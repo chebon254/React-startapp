@@ -6,7 +6,8 @@ import './App.css';
 // import ReactPlayer from "react-player"
 // import Homepg from './Homepg';
 // import About from './About';
-// import { Routes, Route, Link } from 'react-router-dom';
+import Counter from "./redux-btn"
+import { Routes, Route, Link } from 'react-router-dom';
 // import MealList from './components/MealsList';
 // import Counter from './components/Counter';
 // import MealsProvider from './providers/MealsProvider';
@@ -51,7 +52,7 @@ function App() {
     }
   )
 
-  console.log(topDessert);resumerere
+  console.log(topDessert);
   return (
     
     <div>
@@ -72,11 +73,11 @@ function App() {
       {/* <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-      </nav>
+      </nav> */}
       <Routes>
-        <Route path='/' errorElement={<Homepg />} />
-        <Route path='/about' errorElement={<About />} />
-      </Routes> */}
+        {/* <Route path='/' errorElement={<Homepg />} /> */}
+        <Route path='/redux' errorElement={<Counter />} />
+      </Routes>
       {/* <img src={Asset} alt="Monkey Image" /> */}
       {/* <ReactPlayer url={videoUrl} playing={false} volume={0.5}/> */}
     </div>
